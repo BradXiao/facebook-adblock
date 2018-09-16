@@ -60,7 +60,7 @@
             'da': ['Sponsoreret'],
             'de': ['Gesponsert'],
             'el': ['Χορηγούμενη'],
-            'en': ['Sponsored', 'Chartered'],
+            'en': ['Sponsored', 'Chartered', 'SpSonSsoSredS'],
             'eo': ['Reklamo'],
             'es': ['Publicidad', 'Patrocinado'],
             'et': ['Sponsitud'],
@@ -108,8 +108,8 @@
             'uk': ['Реклама'],
             'ur': ['تعاون کردہ'],
             'vi': ['Được tài trợ'],
-            'zh-Hans': ['赞助内容'],
-            'zh-Hant': ['贊助']
+            'zh-Hans': ['赞助内容', '赞赞助赞内赞容赞'],
+            'zh-Hant': ['贊助', '贊贊贊助贊']
         }
     }, {
         // Suggested Post
