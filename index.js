@@ -28,16 +28,7 @@
     var searchedNodes = [{
         // Sponsored
         'selector': [
-            'div[id^=feed_subtitle] > span > a > div',
-            'div[id^=feed_subtitle] > span > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > div > div > div > div > a > span',
-            'div[id^=feed_subtitle] > span > div > div > div > div > div > div > div > div > div > a > span'
+            'div[id^=feed_subtitle]',
         ],
         'content': {
             'af': ['Geborg'],
@@ -420,7 +411,7 @@
                                 comparisonString = nodeContent.trim();
                             }
 
-                            if (searchedNodes[typeIterator].content[targetIterator] == comparisonString) {
+                            if ([...searchedNodes[typeIterator].content[targetIterator]].every(c => comparisonString.contains(c))) {
                                 return true;
                             }
                         }
@@ -457,6 +448,8 @@
             }
         }
     }
+
+    process();
 
     if (mutationObserver) {
 
